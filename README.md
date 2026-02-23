@@ -198,7 +198,7 @@ MIT — see [LICENSE](LICENSE) for details.
 ## 👑 Author
 
 **Rita Noble**
-Security Researcher & Tool Developer
+Penetration Tester | API Security Engineer | DevOps Engineer | Tool Developer
 [github.com/RitaNoble](https://github.com/RitaNoble)
 
 ---

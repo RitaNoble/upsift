@@ -1,0 +1,23 @@
+[project]
+name = "upsift"
+version = "0.1.0"
+description = "Lightweight modular Linux misconfiguration and privilege-escalation detector"
+authors = [{name="Upsift Maintainers", email="security@example.com"}]
+requires-python = ">=3.8"
+dependencies = ["rich>=13.0.0"]
+
+[project.scripts]
+upsift = "upsift.__main__:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "ruff>=0.5.0", "black>=24.0.0"]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+line-length = 100

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "docker_group",
+    "severity": "HIGH",
+    "title": "User 'cyberqueen' is in docker group",
+    "evidence": "Group members: ['cyberqueen']",
+    "remediation": "Remove non-admins from docker group or use rootless Docker with strict controls."
+  },
+  {
+    "id": "path_write",
+    "severity": "HIGH",
+    "title": "PATH is vulnerable to hijacking",
+    "evidence": "Writable: /home/cyberqu\u2026",
+    "remediation": "Remove '.' and user-writable directories from PATH. Restrict perms to 755 or less."
+  },
+  {
+    "id": "suid_binaries",
+    "severity": "INFO",
+    "title": "SUID/SGID scan failed",
+    "evidence": "-",
+    "remediation": "-"
+  },
+  {
+    "id": "systemd_writable",
+    "severity": "HIGH",
+    "title": "Writable systemd units detected",
+    "evidence": "World-writabl\u2026 /etc/systemd/\u2026 World-writabl\u2026 /lib/systemd/\u2026 World-writabl\u2026 /lib/systemd/\u2026 World-writabl\u2026 /lib/systemd/\u2026 World-writabl\u2026 /lib/systemd/\u2026 World-writabl\u2026 /lib/systemd/\u2026 World-writabl\u2026 /lib/systemd/\u2026 World-writabl\u2026 /lib/systemd/\u2026 World-writabl\u2026 /lib/systemd/\u2026 World-writabl\u2026 /lib/systemd/\u2026 World-writabl\u2026 /lib/systemd/\u2026 World-writabl\u2026 /lib/systemd/\u2026 World-writabl\u2026 /lib/systemd/\u2026 World-writabl\u2026 /lib/systemd/\u2026 World-writabl\u2026 /usr/lib/syst\u2026 World-writabl\u2026 /usr/lib/syst\u2026 World-writabl\u2026 /usr/lib/syst\u2026 World-writabl\u2026 /usr/lib/syst\u2026 World-writabl\u2026 /usr/lib/syst\u2026 World-writabl\u2026 /usr/lib/syst\u2026 World-writabl\u2026 /usr/lib/syst\u2026 World-writabl\u2026 /usr/lib/syst\u2026 World-writabl\u2026 /usr/lib/syst\u2026 World-writabl\u2026 /usr/lib/syst\u2026 World-writabl\u2026 /usr/lib/syst\u2026 World-writabl\u2026 /usr/lib/syst\u2026 World-writabl\u2026 /usr/lib/syst\u2026",
+    "remediation": "Set permissions to 0644 and owner root:root for service files."
+  }
+]

@@ -1,0 +1,77 @@
+                                Upsift Findings                                 
+┏━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ ID               ┃ Severity ┃ Title         ┃ Evidence       ┃ Remediation   ┃
+┡━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ docker_group     │ HIGH     │ User          │ Group members: │ Remove        │
+│                  │          │ 'cyberqueen'  │ ['cyberqueen'] │ non-admins    │
+│                  │          │ is in docker  │                │ from docker   │
+│                  │          │ group         │                │ group or use  │
+│                  │          │               │                │ rootless      │
+│                  │          │               │                │ Docker with   │
+│                  │          │               │                │ strict        │
+│                  │          │               │                │ controls.     │
+│ path_write       │ HIGH     │ PATH is       │ Writable:      │ Remove '.'    │
+│                  │          │ vulnerable to │ /home/cyberqu… │ and           │
+│                  │          │ hijacking     │                │ user-writable │
+│                  │          │               │                │ directories   │
+│                  │          │               │                │ from PATH.    │
+│                  │          │               │                │ Restrict      │
+│                  │          │               │                │ perms to 755  │
+│                  │          │               │                │ or less.      │
+│ suid_binaries    │ INFO     │ SUID/SGID     │ -              │ -             │
+│                  │          │ scan failed   │                │               │
+│ systemd_writable │ HIGH     │ Writable      │ World-writabl… │ Set           │
+│                  │          │ systemd units │ /etc/systemd/… │ permissions   │
+│                  │          │ detected      │ World-writabl… │ to 0644 and   │
+│                  │          │               │ /lib/systemd/… │ owner         │
+│                  │          │               │ World-writabl… │ root:root for │
+│                  │          │               │ /lib/systemd/… │ service       │
+│                  │          │               │ World-writabl… │ files.        │
+│                  │          │               │ /lib/systemd/… │               │
+│                  │          │               │ World-writabl… │               │
+│                  │          │               │ /lib/systemd/… │               │
+│                  │          │               │ World-writabl… │               │
+│                  │          │               │ /lib/systemd/… │               │
+│                  │          │               │ World-writabl… │               │
+│                  │          │               │ /lib/systemd/… │               │
+│                  │          │               │ World-writabl… │               │
+│                  │          │               │ /lib/systemd/… │               │
+│                  │          │               │ World-writabl… │               │
+│                  │          │               │ /lib/systemd/… │               │
+│                  │          │               │ World-writabl… │               │
+│                  │          │               │ /lib/systemd/… │               │
+│                  │          │               │ World-writabl… │               │
+│                  │          │               │ /lib/systemd/… │               │
+│                  │          │               │ World-writabl… │               │
+│                  │          │               │ /lib/systemd/… │               │
+│                  │          │               │ World-writabl… │               │
+│                  │          │               │ /lib/systemd/… │               │
+│                  │          │               │ World-writabl… │               │
+│                  │          │               │ /lib/systemd/… │               │
+│                  │          │               │ World-writabl… │               │
+│                  │          │               │ /usr/lib/syst… │               │
+│                  │          │               │ World-writabl… │               │
+│                  │          │               │ /usr/lib/syst… │               │
+│                  │          │               │ World-writabl… │               │
+│                  │          │               │ /usr/lib/syst… │               │
+│                  │          │               │ World-writabl… │               │
+│                  │          │               │ /usr/lib/syst… │               │
+│                  │          │               │ World-writabl… │               │
+│                  │          │               │ /usr/lib/syst… │               │
+│                  │          │               │ World-writabl… │               │
+│                  │          │               │ /usr/lib/syst… │               │
+│                  │          │               │ World-writabl… │               │
+│                  │          │               │ /usr/lib/syst… │               │
+│                  │          │               │ World-writabl… │               │
+│                  │          │               │ /usr/lib/syst… │               │
+│                  │          │               │ World-writabl… │               │
+│                  │          │               │ /usr/lib/syst… │               │
+│                  │          │               │ World-writabl… │               │
+│                  │          │               │ /usr/lib/syst… │               │
+│                  │          │               │ World-writabl… │               │
+│                  │          │               │ /usr/lib/syst… │               │
+│                  │          │               │ World-writabl… │               │
+│                  │          │               │ /usr/lib/syst… │               │
+│                  │          │               │ World-writabl… │               │
+│                  │          │               │ /usr/lib/syst… │               │
+└──────────────────┴──────────┴───────────────┴────────────────┴───────────────┘
